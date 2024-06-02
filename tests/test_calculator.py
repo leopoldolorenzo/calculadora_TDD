@@ -18,3 +18,8 @@ def test_division():
     assert calc.divide(6, 2) == 3
     with pytest.raises(ValueError):
         calc.divide(6, 0)
+
+def test_square_root():
+    calc = Calculator()
+    assert abs(calc.sqrt(9) - 3) < 0.001
+    assert abs(calc.sqrt(2) - 1.414) < 0.001
